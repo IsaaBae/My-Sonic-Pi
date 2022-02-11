@@ -1,0 +1,45 @@
+
+# Welcome to Sonic Pi
+use_synth :sine
+use_bpm 215
+#Measure 1
+play :b2,amp: 3
+sleep 0.5
+play :f3
+sleep 0.5
+play :b3
+sleep 0.5
+play :c4
+sleep 0.9
+play :b3, amp: 3
+sleep 1.5
+#Measure 2
+use_synth :fm
+play :g2, amp: 4
+sleep 0.5
+play :d3
+sleep 0.5
+play :g3
+sleep 0.5
+play :b3
+sleep 0.9
+play :g3, amp: 3
+sleep 1.5
+#Measure 3
+use_bpm 200
+play :e3
+sleep 0.5
+play :b3
+sleep 0.5
+play :c4
+sleep 0.5
+use_synth :sine
+play :c4
+sleep 0.4
+play :d4
+sleep 0.4
+play :c4
+sleep 0.3
+play :d4
+sleep 0.2
+play :b3
