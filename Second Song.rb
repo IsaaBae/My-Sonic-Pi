@@ -29,7 +29,7 @@ define :highs_dn_ss do |n1,n2,n3,n4,n5,n6|
   play  n1
   sleep 1
   play  n2
-  sleep 1
+  sleep 0.5
   play  n3
   sleep 0.5
   play  n4
@@ -47,43 +47,44 @@ sample voice
 end
 
 sleep 6
-
-#Micdrop Notes
-#Low Notes
-live_loop:Low_notes do
-  use_bpm 150
-  2.times do
-    lows_dn_ss :ds3,:as3,:ds4
-    lows_dn_ss :ds2,:as2,:ds3
+1.times do
+  #Micdrop Notes
+  #Low Notes
+  live_loop:Low_notes do
+    use_bpm 150
+    3.times do
+      lows_dn_ss :ds3,:as3,:ds4
+      lows_dn_ss :ds2,:as2,:ds3
+    end
+  end
+  
+  sleep 5
+  
+  #Sample
+  sample BTS
+  sleep 2
+  
+  #High Notes
+  live_loop:High_notes do
+    use_bpm 150
+    6.times do
+      highs_dn_ss :ds4,:ds4,:ds5,:e5,:b4,:as4
+    end
+  end
+  
+  sleep 7.6
+  
+  #High Notes Remixed
+  live_loop:High_Mix do
+    use_bpm 150
+    6.times do
+      5.times do
+        play bomb [x]
+        sleep rest [x]
+        x = x + 1
+      end
+      x = 0
+      highs_dn_ss :ds2,:ds3,:ds4,:e3,:b4,:as3
+    end
   end
 end
-
-sleep 5
-
-#Sample
-sample BTS
-sleep 2
-
-#High Notes
-live_loop:High_notes do
-  use_bpm 150
-  4.times do
-    highs_dn_ss :ds4,:ds4,:ds5,:e5,:b4,:as4
-  end
-end
-
-sleep 7.6
-
-#High Notes Remixed
-live_loop:High_Mix do
-  use_bpm 150
-  4.times do
-    play bomb [x]
-    sleep rest [x]
-    x = x + 1
-  end
-  x = 0
-  highs_dn_ss :ds5,:ds5,:ds6,:e6,:b5,:as5
-end
-
-sleep 9
