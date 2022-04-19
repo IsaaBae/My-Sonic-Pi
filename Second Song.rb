@@ -75,6 +75,10 @@ live_loop:High_notes do
 end
 
 sleep 40
+sample :ambi_glass_hum
+sleep 0.3
+sample :ambi_drone
+sample :ambi_haunted_hum
 
 #Second Song
 live_loop:Melody do
@@ -90,4 +94,3 @@ live_loop:Melody do
   end
 end
 
-sleep 40
