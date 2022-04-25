@@ -43,8 +43,10 @@ live_loop :first_song do
       play (van[x])
       sleep 0.7
       x = x + 1
+      if x>8
+        x = 0
+      end
     end
-    x = 0
   end
   
   sleep 6
