@@ -87,18 +87,20 @@ live_loop :second_song do
   sample :ambi_haunted_hum
   
   #Second Song + Polo G Song
-  live_loop:Melody do
-    use_bpm 150
-    use_synth :beep
-    6.times do
-      13.times do
-        play bomb [x]
-        sleep rest [x]
-        x = x + 1
+live_loop:Melody do
+  use_bpm 150
+  use_synth :beep
+  6.times do
+    13.times do
+      play bomb [x]
+      sleep rest [x]
+      x = x + 1
+      if x>13
+        x = 0
       end
-      x = 0
     end
   end
 end
+
 
 
